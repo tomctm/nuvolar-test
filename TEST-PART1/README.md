@@ -59,3 +59,10 @@ I have tried to summarize in different points and steps the development of the i
 
 - Using gitops flow, this would be an example of how to flow could be created:
 
+![Screenshot 2023-10-30 at 16 54 30](https://github.com/tomctm/nuvolar-test/assets/8587416/51da65fc-8b3d-45f0-b4b5-e6ca2700c7a3)
+
+
+
+
+
+
