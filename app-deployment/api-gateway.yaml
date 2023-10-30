@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: nuvolar/api-gateway:latest  
+        ports:
+        - containerPort: 8080  
+        env:
+        - name: ORDER_SERVICE_URL
+          value: http://order-service 

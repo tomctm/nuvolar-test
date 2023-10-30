@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service-deployment
+  namespace: nuvolar
+spec:
+  replicas: 3  
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: nuvolar/order-service:latest  
+        ports:
+        - containerPort: 8080  
+        env:
+        - name: CUSTOMER_SERVICE_URL
+          value: http://customer-service  
